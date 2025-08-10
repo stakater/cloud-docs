@@ -1,0 +1,50 @@
+site_name: Stakater Cloud
+docs_dir: content
+site_url: https://docs.stakater.com/cloud/
+repo_url: https://github.com/stakater/cloud-docs
+edit_uri: blob/main/content/
+use_directory_urls: false
+strict: true
+theme:
+  logo: assets/images/favicon.svg
+  favicon: assets/images/favicon.svg
+  features:
+    - content.code.copy
+    - content.code.select
+markdown_extensions:
+  - pymdownx.tabbed:
+      alternate_style: true
+  - attr_list
+  - tables
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+extra_javascript:
+  - https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js
+  - javascripts/tablesort.js
+nav:
+  - Welcome:
+      - index.md
+  - Getting Started:
+      - getting-started/overview.md
+  - Service Catalog:
+      - service-catalog/overview.md
+      - service-catalog/openshift.md
+  - Legal Documents:
+      - legal-documents/overview.md
+      - legal-documents/fa.md
+      - legal-documents/gtc.md
+      - 'Uptime SLA': legal-documents/sla.md
+      - 'Support SLA': 'https://support.stakater.com/responsetimes.html'
+      - legal-documents/dpa.md
+      - legal-documents/nda.md
+      - legal-documents/pp.md
+  - Help:
+      - help/support/support.md
+
+plugins:
+  - include-markdown
+  - mkdocs-video
