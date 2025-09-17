@@ -12,6 +12,13 @@ jobs:
       MD_CONFIG: .github/md_config.json
       DOC_SRC: content
       MD_LINT_CONFIG: .markdownlint.yaml
+  deploy_doc:
+    concurrency:
+      group: pull_request_versioned_doc
+      cancel-in-progress: false
+    uses: stakater/.github/.github/workflows/pull_request_versioned_doc.yaml@v0.0.154
+    secrets:
+      GH_TOKEN: ${{ secrets.PUBLISH_TOKEN }}
   build:
     uses: stakater/.github/.github/workflows/pull_request_container_build.yaml@v0.0.99
     with:
