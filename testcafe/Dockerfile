@@ -1,4 +1,4 @@
-FROM node:22-alpine
+FROM node:24-alpine
 WORKDIR testcafe
 
 ENV XDG_DOWNLOAD_DIR=/opt/JDownloader/Downloads
